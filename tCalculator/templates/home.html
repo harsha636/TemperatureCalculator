@@ -1,0 +1,53 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Home</title>
+    <link href="static/css/style.css" rel="stylesheet" type="text/css" >
+    <!-- Bootstrap core CSS -->
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    {% load static %}
+</head>
+<body>
+
+    <div class="container">
+        <div class="heading">
+            <h1>Temperature Converter</h1>
+        </div>
+
+        <div class="form-container">
+            <form action="{% url 'home' %}" class="form" method="post">
+                {% csrf_token %}
+                <div class="temp">
+                    <div class="input-div">
+                        <label for="temperature">Enter Temperature:</label>
+                        <input class="n" type="number" step="any" name="temperature" value="0" required>
+                    </div>
+                </div>
+
+                <div class="temp">
+                    <label for="unit">Choose Unit:</label>
+                    <br />
+                    <div class="input-div">
+                        <select name="unit" required>
+                            <option value="celsius">Celsius</option>
+                            <option value="fahrenheit">Fahrenheit</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <div class="form-container">
+                    <button class="button" type="submit">Submit</button>
+                </div>
+
+
+            </form>
+
+        </div>
+        {% if result %}
+        <p>{{ result }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>

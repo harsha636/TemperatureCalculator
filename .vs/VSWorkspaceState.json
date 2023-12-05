@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\tCalculator",
+    "\\tCalculator\\static",
+    "\\tCalculator\\static\\css",
+    "\\tCalculator\\templates",
+    "\\TempCalculator"
+  ],
+  "SelectedNode": "\\tCalculator\\templates\\home.html",
+  "PreviewInSolutionExplorer": false
+}
